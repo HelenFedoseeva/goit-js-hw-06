@@ -5,7 +5,7 @@ formRef.addEventListener('submit', onSubmitHandler)
 
 function onSubmitHandler(event) { 
     event.preventDefault();
-    // console.log(event.target.elements.password.value)
+    
     const {   elements: { email, password } 
    }  = event.target;
     if (email.value === '' || password.value === '') { 
@@ -14,6 +14,10 @@ function onSubmitHandler(event) {
 
     const data = {};
     data.email = email.value;
-    data.password = password.value
+    data.password = password.value;
+
+    event.target.reset();
+
+    console.log(data)
 
 }

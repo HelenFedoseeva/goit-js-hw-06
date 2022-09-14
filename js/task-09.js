@@ -14,5 +14,5 @@ console.log(colorNameRef)
 
 changeColorBtnRef.addEventListener('click', () => { 
   bodyRef.style.backgroundColor = getRandomHexColor();
-  colorNameRef.textContent = getRandomHexColor();
+  colorNameRef.textContent = bodyRef.style.backgroundColor;
 })
