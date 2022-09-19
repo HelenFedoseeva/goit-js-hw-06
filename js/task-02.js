@@ -12,15 +12,16 @@ const ingredientsListEl = document.querySelector('#ingredients')
 
 const listFirstEl = document.createElement('li');
 listFirstEl.textContent = ingredients[0];
-let element
-ingredients.map(ingredient => { 
+
+const ingredientsMarkup = ingredients.map(ingredient => { 
+  let element;
   element = document.createElement('li');
-  element.textContent = ingredient
-  element.classList.add('item')
-  console.log(element)
-  ingredientsListEl.append(element)
-  
+  element.textContent = ingredient;
+  element.classList.add('item');
+  return element;
 })
+
+ingredientsListEl.append(...ingredientsMarkup)
 // const listSecondEl = document.createElement('li');
 // listSecondEl.textContent = ingredients[1];
 
